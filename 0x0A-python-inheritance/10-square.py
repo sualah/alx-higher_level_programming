@@ -24,3 +24,23 @@ class Square(Rectangle):
         super().__init__(size, size)
         self.integer_validator("size", size)
         self.__size = size
+
+
+    def __str__(self):
+        """
+        str funtion for rectangle
+
+        Returns:
+            Return width/height
+        """
+        return '[Rectangle] ' + str(self.__size) + '/' + str(self.__size)
+
+
+    def area(self):
+        """
+        Calculates the area of the rectangle
+
+        Return:
+           The area of the rectangle
+        """
+        return self.__size * self.__size
