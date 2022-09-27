@@ -8,13 +8,12 @@ Created on Tue Sep 27 10:13:37 2022
 
 
 class MyList(list):
-    """
-     class MyList that inherits from list
-    """
+    """a subclass of list"""
+
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
+
     def print_sorted(self):
-        """
-        Public instance method that prints sorted list
-        """
-        list_copy = self[:]
-        list_copy.sort()
-        print(list_copy)
+        """prints the sorted list"""
+        print(sorted(self))
