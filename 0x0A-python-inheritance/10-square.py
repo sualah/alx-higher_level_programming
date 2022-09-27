@@ -11,36 +11,14 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """
-    A Square class shape, inheirts from Rectangle and BaseGeometry
-    """
-    def __init__(self, size):
-        """"
-        Init function for Square
+    """A representation of a square"""
 
-        Attributes:
-            size (int): The size of the square
-        """
-        super().__init__(size, size)
+    def __init__(self, size):
+        """instantiation of the square"""
         self.integer_validator("size", size)
         self.__size = size
-
-
-    def __str__(self):
-        """
-        str funtion for rectangle
-
-        Returns:
-            Return width/height
-        """
-        return '[Rectangle] ' + str(self.__size) + '/' + str(self.__size)
-
+        super().__init__(size, size)
 
     def area(self):
-        """
-        Calculates the area of the rectangle
-
-        Return:
-           The area of the rectangle
-        """
-        return self.__size * self.__size
+        """"returns the area of the square"""
+        return self.__size ** 2
