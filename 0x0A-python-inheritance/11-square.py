@@ -7,34 +7,22 @@ Created on Tue Sep 27 10:13:37 2022
 """
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
-    """
-    A Square class shape, inheirts from BaseGeometry
-    """
+class Square(Rectangle):
+    """A representation of a square"""
+
     def __init__(self, size):
-        """"
-        Init function for Square
-
-        Attributes:
-            size (int): The size of the square
-        """
+        """instantiation of the square"""
         self.integer_validator("size", size)
         self.__size = size
-
-    def __str__(self):
-        """
-        str funtion to print with/height
-
-        Returns:
-            Return width/height
-        """
-        return '[Square] ' + str(self.__size) + '/' + str(self.__size)
+        super().__init__(size, size)
 
     def area(self):
-        """
-        A function that calculates the area of the Square
-        """
+        """"returns the area of the square"""
         return self.__size ** 2
+
+    def __str__(self):
+        """informal string reepresentation of the square"""
+        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
