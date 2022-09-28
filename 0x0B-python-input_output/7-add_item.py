@@ -6,8 +6,8 @@ Created on Wed Sep 28 15:13:37 2022
 @author: Salifu Abdullai
 """
 import sys
-save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 try:
